@@ -5,7 +5,7 @@ const { stringify } = require("querystring");
 const ejs = require('ejs');
 const weatherModule = require("./weatherApi.js");
 
-port = 3011;
+const port = process.env.PORT || 3000;
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
